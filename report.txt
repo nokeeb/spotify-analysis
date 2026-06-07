@@ -1,0 +1,80 @@
+Longest 10 tracks (minutes):
+    Track name                                      Duration(minutes)
+Unity (Voyage Mix) Pt. 1                             87.288250
+Crossing Wires 002 - Continuous DJ Mix               79.817100
+Crossing Wires 002 - Continuous DJ Mix               79.817100
+The Lab 03 - Continuous DJ Mix Part 1                78.838367
+Amnesia Ibiza Underground 10 DJ Mix                  76.064950
+House of Om - Mark Farina - Continuous Mix           74.125333
+Live In Tokyo - Continuous Mix                       72.330433
+Greenhouse Construction                              72.245350
+NQ State of Mind, Vol. 1 - Continuous DJ Mix         70.770100
+Ocean Waves Sounds                                   68.670967
+
+5 most popular genres:
+
+Genre       Average popularity
+pop-film    59.283000
+k-pop       56.952953
+chill       53.651000
+sad         52.379000
+grunge      49.594000
+
+20 most popular tracks:
+
+                Track name               Popularity(0-100)
+
+Unholy (feat. Kim Petras)                     100
+Quevedo: Bzrp Music Sessions, Vol. 52          99
+La Bachata                                     98
+I'm Good (Blue)                                98
+Tití Me Preguntó                               97
+Me Porto Bonito                                97
+Efecto                                         96
+Under The Influence                            96
+I Ain't Worried                                96
+Ojitos Lindos                                  95
+Efecto                                         95
+As It Was                                      95
+Moscow Mule                                    94
+Ojitos Lindos                                  94
+Glimpse of Us                                  94
+Sweater Weather                                93
+PROVENZA                                       93
+CUFF IT                                        93
+Neverita                                       93
+Another Love                                   93
+
+20 most popular artists:
+ Artist name        Average popularity
+Bizarrap             99.000000
+Harry Styles         92.000000
+Luar La L            90.500000
+Beach Weather        90.000000
+Pablo Pesadilla      88.000000
+Olivia Rodrigo       87.400000
+BYOR                 87.000000
+Benson Boone         86.000000
+Ruth B.              85.500000
+Baby Rasta           85.000000
+Bradley Cooper       84.000000
+Måneskin             83.666667
+Foster The People    83.500000
+Lil Nas X            83.454545
+Morgan Wallen        83.333333
+Aventura             83.000000
+Amanda Reifer        82.000000
+Bomba Estéreo        81.500000
+Cults                81.333333
+Backstreet Boys      81.000000
+
+
+The feature that has the highest positive correlation with popularity is: Loudness (0.05) -> still pretty low
+
+The Histogram of popularity shows us that as expected, high popularity songs tend to be rare.
+The rate of highly popular songs is slightly over 6%.
+
+We can also see that popular songs tend to be more danceable.
+
+Most songs from the dataset are in the upper level of energy, but we can not see a clear correlation with popularity.The most popular songs are in all areas of energy.
+

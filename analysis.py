@@ -93,6 +93,7 @@ plt.show()
 
 # # Scatter -> popularity vs energy
 sns.scatterplot(x='popularity',y='energy',data=sample_df)
+plt.title('Track popularity vs energy')
 plt.savefig('output/scatter_popularity_vs_energy.png')
 plt.show()
 
