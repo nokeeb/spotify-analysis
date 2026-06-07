@@ -50,6 +50,7 @@ Full report can be found in the project files (report.txt).
 
 ## How to install 
 Run this command into a terminal of your choice:
+
 git clone https://github.com/nokeeb/spotify-analysis
 
 ## Mission
