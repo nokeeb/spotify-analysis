@@ -1,8 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
 
-spotify_df=pd.read_csv('dataset.csv')
+BASE_DIR = Path(__file__).resolve().parent
+spotify_df = pd.read_csv(BASE_DIR / 'dataset.csv')
+
 # print('columns:',spotify_df.columns)
 # print('shape:',spotify_df.shape)
 # print('info:',spotify_df.info())
@@ -65,7 +68,7 @@ plt.hist(clean_df.popularity_category)
 plt.xlabel('Popularity category')
 plt.ylabel('No. of songs')
 plt.title('Histogram of popularity')
-plt.savefig('output/histogram_of_popularity.png')
+plt.savefig(BASE_DIR / 'output' / 'histogram_of_popularity.png')
 plt.show()
 
 
@@ -75,7 +78,7 @@ sns.barplot(top_5_genre)
 plt.xlabel('Genre')
 plt.ylabel('Average popularity')
 plt.title('Top genres')
-plt.savefig('output/top_genres.png')
+plt.savefig(BASE_DIR / 'output' / 'top_genres.png')
 plt.show()
 
 sample_df=clean_df.sample(2000)
@@ -88,12 +91,12 @@ sns.scatterplot(x='popularity',y='danceability',data=sample_df)
 plt.title('Track popularity vs danceability')
 plt.xlabel('Popularity')
 plt.ylabel('Danceability')
-plt.savefig('output/scatter_popularity_vs_danceability.png')
+plt.savefig(BASE_DIR / 'output' / 'scatter_popularity_vs_danceability.png')
 plt.show()
 
 # # Scatter -> popularity vs energy
 sns.scatterplot(x='popularity',y='energy',data=sample_df)
 plt.title('Track popularity vs energy')
-plt.savefig('output/scatter_popularity_vs_energy.png')
+plt.savefig(BASE_DIR / 'output' / 'scatter_popularity_vs_energy.png')
 plt.show()
 
