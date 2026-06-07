@@ -5,9 +5,6 @@ import seaborn as sns
 from pathlib import Path
 
 def main():
-
-    # this approach ensures that the user will not have path issues that could
-    # result in the dataset not opening
     BASE_DIR = Path(__file__).resolve().parent
     spotify_df = pd.read_csv(BASE_DIR / 'dataset.csv')
 
@@ -78,7 +75,7 @@ def main():
     # print(correlation_df.sort_values('Value',ascending=False))
 
     # print(clean_df.groupby('popularity_category').count())
-    
+
     # Histogram of popularity (how many songs have Low,Medium or High popularity)
     plt.hist(clean_df.popularity_category)
     plt.xlabel('Popularity category')
@@ -98,25 +95,22 @@ def main():
     plt.show()
 
 
-
+    def plot_hexbin(df1,df2,xlabel,ylabel,title):
+        hb=plt.hexbin(df1,df2,gridsize=50)
+        plt.colorbar(hb)
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.savefig(BASE_DIR/'output'/f'hexbin_{xlabel}_vs_{ylabel}.png')
+        plt.show()
 
     # Hexbin -> popularity vs danceability 
+    plot_hexbin(clean_df.popularity,clean_df.danceability,'Popularity','Danceability','Track popularity vs danceability')
 
-
-    hb1=plt.hexbin(clean_df.popularity,clean_df.danceability, gridsize=50)
-    plt.colorbar(hb1)
-    plt.title('Track popularity vs danceability')
-    plt.xlabel('Popularity')
-    plt.ylabel('Danceability')
-    plt.savefig(BASE_DIR / 'output' / 'hexbin_popularity_vs_danceability.png')
-    plt.show()
 
     # # Hexbin -> popularity vs energy
-    hb2=plt.hexbin(clean_df.popularity,clean_df.energy, gridsize=50)
-    plt.colorbar(hb2)
-    plt.title('Track popularity vs energy')
-    plt.savefig(BASE_DIR / 'output' / 'hexbin_popularity_vs_energy.png')
-    plt.show()
+    plot_hexbin(clean_df.popularity,clean_df.energy,'Popularity','Energy','Track popularity vs Energy')
+    
     
     #this allows safe imports
 if __name__=='__main__':
