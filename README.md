@@ -50,9 +50,9 @@ Full report can be found in the project files (report.txt).
 
 ## How to install 
 Run this command into a terminal of your choice:
-
+```bash
 git clone https://github.com/nokeeb/spotify-analysis
-
+```
 ## Mission
 Upgrading knowledge in Python, more precisely in:
 - Pandas
