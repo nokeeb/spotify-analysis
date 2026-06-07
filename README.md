@@ -19,15 +19,19 @@ Link: https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
 ## Graphs
 
 -History of popularity:
+
 ![alt text](output/histogram_of_popularity.png)
 
 Track popularity vs danceability:
+
 ![alt text](output/scatter_popularity_vs_danceability.png)
 
 Track popularity vs energy:
+
 ![alt text](output/scatter_popularity_vs_energy.png)
 
 Top genres:
+
 ![alt text](output/top_genres.png)
 
 All of the graphs here are included in the project files (output folder).
