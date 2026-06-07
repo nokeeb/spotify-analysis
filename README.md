@@ -7,16 +7,16 @@ Spotify Music Trends analysis. Taking a look at: song popularity, duration, danc
 - Report on the analysis performed
 
 ## Tech stack
-- Python
-- Pandas
+- Python (Pandas)
 
 ## Dataset used
 - Spotify Tracks Dataset from Kaggle
 
 
 Great dataset with alot of data and most importantly, it is clean!
-Link: https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
-License: http://opendatacommons.org/licenses/odbl/1.0/
+Link:  https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+
+License:  http://opendatacommons.org/licenses/odbl/1.0/
 ## Graphs
 
 -History of popularity:
