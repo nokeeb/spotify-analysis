@@ -14,26 +14,26 @@ def main():
     # print('info:',spotify_df.info())
     # print(spotify_df[spotify_df.isnull().any(axis=1)])
     #Found null track name at 65900 index, so I will get rid of it...
-    clean_df=spotify_df.drop(index=65900)
-    duplicates=clean_df.duplicated().sum()
+    spotify_df=spotify_df.drop(index=65900)
+    # duplicates=spotify_df.duplicated().sum()
     #No duplicates found
 
-    clean_df['duration_minutes']=(((clean_df['duration_ms']/1000)/60))
+    spotify_df['duration_minutes']=(((spotify_df['duration_ms']/1000)/60))
 
     #Top 10 tracks by duration(minutes)
-    # print(clean_df[['track_name','duration_minutes']].sort_values('duration_minutes',ascending=False).head(10).set_index('track_name'))
+    # print(spotify_df[['track_name','duration_minutes']].sort_values('duration_minutes',ascending=False).head(10).set_index('track_name'))
 
     #defining a new column that has 3 values: Low, Medium and High, and the bins represent
     #the ranges of each category. -1 is used to avoid the first value (0) not being taken into consideration 
-    clean_df['popularity_category']=pd.cut(clean_df['popularity'],bins=[-1,33,66,100],labels=["Low",'Medium','High'])
-    popularity_by_genre=clean_df.groupby('track_genre')['popularity'].mean()
+    spotify_df['popularity_category']=pd.cut(spotify_df['popularity'],bins=[-1,33,66,100],labels=["Low",'Medium','High'])
+    popularity_by_genre=spotify_df.groupby('track_genre')['popularity'].mean()
 
     #Top 5 genres by popularity
     top_5_genre=popularity_by_genre.sort_values(ascending=False).head(5)
     # print(top_5_genre)
 
     
-    top_20_songs=clean_df.sort_values('popularity',ascending=False)[['track_name','popularity']]
+    top_20_songs=spotify_df.sort_values('popularity',ascending=False)[['track_name','popularity']]
     top_20_songs.drop_duplicates().head(20).set_index('track_name')
 
     #20 most popular tracks
@@ -42,8 +42,8 @@ def main():
     #here we are, for each song where we have multiple artists featuring,
     #spliting them into singular values in order to have more representative
     #data for getting the most popular artists
-    clean_df['artist']=clean_df['artists'].str.split(';')
-    df_exploded = clean_df.explode('artist')
+    spotify_df['artist']=spotify_df['artists'].str.split(';')
+    df_exploded = spotify_df.explode('artist')
     popularity_by_artist=df_exploded.groupby('artist')['popularity'].mean()
     top_20_artists_by_popularity=popularity_by_artist.drop_duplicates()
     top_20_artists_by_popularity.sort_values(ascending=False).head(20)
@@ -51,13 +51,13 @@ def main():
     #most popular artists(top 20 artists by average popularity)
     # print(top_20_artists_by_popularity)
 
-    popularity=clean_df['popularity']
+    popularity=spotify_df['popularity']
 
-    energy=clean_df['energy']
-    loudness=clean_df['loudness']
-    valence=clean_df['valence']
-    acousticness=clean_df['acousticness']
-    speechiness=clean_df['speechiness']
+    energy=spotify_df['energy']
+    loudness=spotify_df['loudness']
+    valence=spotify_df['valence']
+    acousticness=spotify_df['acousticness']
+    speechiness=spotify_df['speechiness']
 
     pop_to_energy=popularity.corr(energy)
     pop_to_loudness=popularity.corr(loudness)
@@ -74,10 +74,10 @@ def main():
     # Popularity correlations
     # print(correlation_df.sort_values('Value',ascending=False))
 
-    # print(clean_df.groupby('popularity_category').count())
+    # print(spotify_df.groupby('popularity_category').count())
 
     # Histogram of popularity (how many songs have Low,Medium or High popularity)
-    plt.hist(clean_df.popularity_category)
+    plt.hist(spotify_df.popularity_category)
     plt.xlabel('Popularity category')
     plt.ylabel('No. of songs')
     plt.title('Histogram of popularity')
@@ -105,11 +105,11 @@ def main():
         plt.show()
 
     # Hexbin -> popularity vs danceability 
-    plot_hexbin(clean_df.popularity,clean_df.danceability,'Popularity','Danceability','Track popularity vs danceability')
+    plot_hexbin(spotify_df.popularity,spotify_df.danceability,'Popularity','Danceability','Track popularity vs danceability')
 
 
     # # Hexbin -> popularity vs energy
-    plot_hexbin(clean_df.popularity,clean_df.energy,'Popularity','Energy','Track popularity vs Energy')
+    plot_hexbin(spotify_df.popularity,spotify_df.energy,'Popularity','Energy','Track popularity vs Energy')
     
     
     #this allows safe imports
