@@ -56,11 +56,19 @@ Requirements: see ```requirements.txt```
 Run this command into a terminal of your choice to download:
 ```bash
 git clone https://github.com/nokeeb/spotify-analysis
+cd spotify-analysis
 ```
 then:
 ```bash
 pip install -r requirements.txt
+```
+Run the script with
+```bash
 python analysis.py
+```
+If that doesn't work, try:
+```bash
+py analysis.py
 ```
 
 
