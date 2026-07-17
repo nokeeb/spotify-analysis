@@ -1,3 +1,4 @@
+<img width="640" height="480" alt="hexbin_popularity_vs_danceability" src="https://github.com/user-attachments/assets/556f2442-c634-4cc1-8404-14076ff6b8a2" />
 # Spotify Music Trends Analysis
 Spotify Music Trends analysis. Taking a look at: song popularity, duration, danceability, energy and valence.
 
@@ -22,19 +23,19 @@ License:  http://opendatacommons.org/licenses/odbl/1.0/
 
 -History of popularity:
 
-![alt text](output/histogram_of_popularity.png)
+<img width="640" height="480" alt="histogram_of_popularity" src="https://github.com/user-attachments/assets/c2459ed4-586c-4ab7-8108-0544cafe9db4" />
 
 Track popularity vs danceability:
 
-![alt text](output/scatter_popularity_vs_danceability.png)
+<img width="640" height="480" alt="hexbin_popularity_vs_danceability" src="https://github.com/user-attachments/assets/3b85e6f9-9f7d-4694-9669-f914ff8f59a0" />
 
 Track popularity vs energy:
 
-![alt text](output/scatter_popularity_vs_energy.png)
+<img width="640" height="480" alt="hexbin_popularity_vs_energy" src="https://github.com/user-attachments/assets/8590d6c3-b021-48d0-84b8-62b518332f39" />
 
 Top genres:
 
-![alt text](output/top_genres.png)
+<img width="640" height="480" alt="top_genres" src="https://github.com/user-attachments/assets/f38031b1-4ba3-4cc2-91f3-a851b7579d52" />
 
 All of the graphs here are included in the project files (output folder).
 
