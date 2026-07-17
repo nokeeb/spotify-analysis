@@ -110,8 +110,8 @@ def main():
 
     # # Hexbin -> popularity vs energy
     plot_hexbin(spotify_df.popularity,spotify_df.energy,'Popularity','Energy','Track popularity vs Energy')
-    
-    
+
+    print('Done! Check the output folder for the saved visuals, and report.txt for a detailed report on the data analyzed')
     #this allows safe imports
 if __name__=='__main__':
     main()
