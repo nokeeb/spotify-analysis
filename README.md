@@ -1,4 +1,3 @@
-<img width="640" height="480" alt="hexbin_popularity_vs_danceability" src="https://github.com/user-attachments/assets/556f2442-c634-4cc1-8404-14076ff6b8a2" />
 # Spotify Music Trends Analysis
 Spotify Music Trends analysis. Taking a look at: song popularity, duration, danceability, energy and valence.
 
